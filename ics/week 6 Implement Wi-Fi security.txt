@@ -1,0 +1,14 @@
+week 6 Implement Wi-Fi security
+
+Step1: Switch On the D-Link Router.
+Step2: Open a browser and search for dlinkrouter.local
+Step3: Login 
+output: 
+username: admin
+password: .......
+login
+Step4: Open Setup security mode as WPA2
+Step5: Go to advanced tab
+Step6: Go to wireless tab
+Step7: Go to wireless Repeater
+Step8: Go to status tab

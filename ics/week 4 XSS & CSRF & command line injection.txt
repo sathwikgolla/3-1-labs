@@ -1,0 +1,71 @@
+week4:-
+1. cd /var/www/html
+2. sudo git clone https://github.com/digininja/DVWA.git
+3. ls
+4. sudo mv DVWA dvwa
+5. sudo chmod -R 777 dvwa
+6. ls
+dvwa  index.html  index.nginx-debian.html
+7. cd dvwa
+8. ls
+9. cd config
+10. ls
+11. sudo cp config.inc.php.dist
+12. ls
+13. sudo nano config.inc.php
+-change username & password
+ username - admin
+ password - password (press ctrl+x,y,enter)
+14. cat config.inc.php
+15. sudo service mysql start
+16. sudo MySQL -u root -p
+  create database dvwa;
+  create user admin @127.0.0.1 identified by 'password';
+  grant all .* to admin @127.0.0.1;
+  exit
+17. cd /etc
+18. cd php 
+19. cd 8.2
+20. cd apache2
+21. ls
+22. sudo nano php.ini
+23. sudo service apache2 start
+24. go to chrome search http://127.0.0.1/dvwa
+25. login 
+	username: admin
+	password: password 
+26. set dvwa security from impossible to low 
+
+output:- 
+command injection 
+	IP address: 127.0.0.1 submit
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl-64 time=0.056 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl-64 time=0.065 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl-64 time=0.057 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl-64 time=0.038 ms
+
+--- 127.0.0.1 ping statistics---
+4 packet transmitted, 4 received, 0% packet loss, time 3057ms
+rt min.avg/avg/mdev =0.038/0.054/0.065/0.009 ms
+Open command prompt in the windows system and use the command ping 0.0.0.0&net user
+Pinging 0.0.0.0 with 32 bytes of data:
+PING: transmit failed. General failure.
+PING: transmit failed. General failure.
+PING: transmit failed. General failure.
+PING: transmit failed. General failure.
+
+PING statistics for 0.0.0.0:
+	packets: Sent =4, Received =0,lost -4(100% loss),
+
+XSS reflection:-
+Enter any name in the text box and click submit.
+hello world
+output:-
+Hello Hello world
+
+CSRF Attack:-
+login 
+change password
+
+

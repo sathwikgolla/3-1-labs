@@ -1,0 +1,48 @@
+week3:-
+
+1. cd /var/www/html
+2. sudo git clone https://github.com/digininja/DVWA.git
+3. ls
+4. sudo mv DVWA dvwa
+5. sudo chmod -R 777 dvwa
+6. ls
+dvwa  index.html  index.nginx-debian.html
+7. cd dvwa
+8. ls
+9. cd config
+10. ls
+11. sudo cp config.inc.php.dist
+12. ls
+13. sudo nano config.inc.php
+-change username & password
+ username - admin
+ password - password (press ctrl+x,y,enter)
+14. cat config.inc.php
+15. sudo service mysql start
+16. sudo MySQL -u root -p
+  create database dvwa;
+  create user admin @127.0.0.1 identified by 'password';
+  grant all .* to admin @127.0.0.1;
+  exit
+17. cd /etc
+18. cd php 
+19. cd 8.2
+20. cd apache2
+21. ls
+22. sudo nano php.ini
+23. sudo service apache2 start
+24. go to chrome search http://127.0.0.1/dvwa
+25. login 
+	username: admin
+	password: password 
+26. set dvwa security from impossible to low 
+27.go to injection 
+	search: % 'or' 1 '=' 1
+
+output:-
+ID:  % 'or' 1 '=' 1
+Firstname: admin
+Lastname: admin
+
+
+

@@ -1,0 +1,42 @@
+week1:
+Message:
+GFS WMY OG LGDVS MF SFNKYHOSU ESLLMRS, PC WS BFGW POL DMFRQMRS, 
+PL OG CPFU M UPCCSKSFO HDMPFOSXO GC OIS LMES DMFRQMRS DGFR SFGQRI OG CPDD GFS LISSO GK LG,
+MFU OISF WS NGQFO OIS GNNQKKSFNSL GC SMNI DSOOSK. WS NMDD OIS EGLO CKSJQSFODY GNNQKKPFR DSOOSK OIS 'CPKLO',
+OIS FSXO EGLO GNNQKKPFR DSOOSK OIS 'LSNGFU' OIS CGDDGWPFR EGLO GNNQKKPFR DSOOSK OIS 'OIPKU', 
+MFU LG GF, QFOPD WS MNNGQFO CGK MDD OIS UPCCSKSFO DSOOSKL PF OIS HDMPFOSXO LMEHDS. 
+OISF WS DGGB MO OIS NPHISK OSXO WS WMFO OG LGDVS MFU WS MDLG NDMLLPCY POL LYEAGDL. 
+WS CPFU OIS EGLO GNNQKKPFR LYEAGD MFU NIMFRS PO OG OIS CGKE GC OIS 'CPKLO' DSOOSK GC OIS HDMPFOSXO LMEHDS, 
+OIS FSXO EGLO NGEEGF LYEAGD PL NIMFRSU OG OIS CGKE GC OIS 'LSNGFU' DSOOSK, MFU OIS CGDDGWPFR
+EGLO NGEEGF LYEAGD PL NIMFRSU OG OIS CGKE GC OIS 'OIPKU' DSOOSK, MFU LG GF, QFOPD WS MNNGQFO CGK MDD 
+LYEAGDL GC OIS NKYHOGRKME WS WMFO OG LGDVS.
+Step:1 
+Open the encrypted message only in Notepad.
+Step2:(in kali linux)
+Find the frequency of each letter in the encrypted message. to find the frequency of all 
+the letters appearing in the intercept. For this intercept we get the values given in the table below.
+s-88,o-85,g-67,f-51,d-42,l-39,k-35,m-35,i-33,p-30,n-29,c-26,e-23,r-17,,u-17,w-16,q-14,y-8,h-8,x-6,a-5,
+v-3,b-2,j-1,t-0,z-0
+Step3:(from chrome)
+Follow the table below to find the characters to be substituted for the given encrypted
+message.
+E-12.7,T-9.1,A-8.2,O-7.5,I-7.0,N-6.7,S-6.3,H-6.1,R-6.0,D-4.3,L-4.0,C-2.8,U-2.8,M-2.4,W-2.4,
+F-2.2,G-2.0,Y-2.0,P-1.9,B-1.5,V-0.98,K-0.77,J-0.15,,X-0.15,Q-0.095,Z-0.074
+Step4:
+Click ctrl+H in the notepad
+Click the check box: Match case
+Step 5:(in notepad window)
+Start substituting one by one letters by following the sequence
+S → e, O → t, I → h, G → o, F → n, M → a, X → x, W → w, B → k, U → d, D → l, K → r, 
+P → i, L → s, V → v, H → p, A → b, X → x, Y → y, E → m, N →c, C →f, R →g, Q → u, J → q
+Step 6:
+Final decrypted text will be as shown below.
+output:-
+one way to solve an encrypted message if we know its language is to find a different plaintext of the same
+language long enough to fill one sheet or so then we count the occurrences of each letter, we call the most 
+frequently occurring letter the 'first' the next most occurring letter the 'second' the following most occurring
+letter the 'third' and so on until we account for all the different letters in the plaintext sample, then we look 
+at the cipher text we want to solve and we also classify its symbols. we find the most occurring symbol and change 
+it to the form of the 'first' letter of the plaintext sample the next most common symbol is changed to the form of 
+the 'second' letter and the following most common symbol is changed to the form of the 'third' letter and so on
+until we account for all symbols of the cryptogram we want to solve

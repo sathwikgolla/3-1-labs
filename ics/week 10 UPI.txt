@@ -1,0 +1,15 @@
+week 10 UPI
+
+1. Download anyDesk or Team Viewer on Your Desktop
+2. Download anyDesk on Team Viewer on your mobile
+3. Download any UPI application in your mobile
+4. connect desktop and mobile using any desktop sharing application
+5. perform a transaction while desktop and pc are connected to test the security of UPI applications
+
+output:-
+
+	UPI apps 		Security
+phonepay		medium security since app is viewed, but the payment 
+			process can't done due to screen sharing
+Gpay			Low Security because everything can be done while screen sharing
+Paytm			High security app doesn't open due to screen sharing. 

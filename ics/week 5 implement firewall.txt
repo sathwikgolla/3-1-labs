@@ -1,0 +1,43 @@
+week 5 implement firewall
+In kali
+> sudo service apache2 start
+password: kali
+> sudo service mysql start
+> ifconfig
+In Windows CMD
+> ipconfig
+> ping 192.168.23.128
+In kali
+> sudo iptables -A INPUT -s 192.168.23.1 -j DROP
+In windows
+> ping 192.168.23.128
+In kali
+> sudo iptables -A INPUT -s 192.168.23.1 -j DROP
+In windows
+> ping 192.168.23.128
+In kali
+> sudo iptables -D INPUT -s 192.168.23.1 -j DROP
+In windows
+> ping 192.168.23.128
+In kali
+> sudo iptables -A INPUT -s 192.168.23.1 -p tcp --destination-port 80 -j DROP
+In wondows
+open browser and search for 192.168.23.128
+In kali
+> sudo iptables -D INPUT -s 192.168.23.1 -p tcp --destination-port 80 -j DROP
+output:
+Pinging 192.168.23.128 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Ping statistics for 192.168.23.128:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+Pinging 192.168.23.128 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+Ping statistics for 192.168.23.128:
+    Packets: Sent = 4, Received = 4, Lost = 4 (100% loss),
+(This stite can't be reached) -> will be displayed in browser
