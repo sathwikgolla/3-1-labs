@@ -1,0 +1,20 @@
+from sklearn import datasets
+from sklearn.svm import svc
+from sklearn.model_selection import train_test_split
+from sklern.svm import classifiction_report,confusion_matrix
+iris=datasets.load_iris()
+x=pd.DataFrame(iris.data)
+x.columns=['sepal_length','sepal_width','petal_width','petal_length']
+print(x)
+y=pd.DataFrame(iris.target)
+y.colums=['Target']
+print(y)
+x_train,x_test,y_train,y_test=train_test_split(iris.data,iris.target,test_size=0.1)
+from sklearn.svm import svc
+model=svm()
+svm=model.fit(x_train,y_train)
+y_pred=svc.predict(x_test)
+print('confusion matrix')
+print(confusion_matrix(y_test,y_pred))
+print('Accuracy matrix')
+print(classifiction_report(y-test,y_pred))
